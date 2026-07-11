@@ -1,0 +1,77 @@
+{
+  "entities": {
+    "Donation": {
+      "title": "Donation",
+      "description": "Details of a donor collected before showing the QR code.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the donor.",
+          "maxLength": 100
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the donor.",
+          "format": "email",
+          "maxLength": 100
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the donor.",
+          "maxLength": 20
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the donation intent was recorded."
+        }
+      },
+      "required": ["name", "phone", "timestamp"]
+    },
+    "Enquiry": {
+      "title": "Enquiry",
+      "description": "Contact form submissions from the website.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name of the person enquiring.",
+          "maxLength": 100
+        },
+        "email": {
+          "type": "string",
+          "description": "Email address of the person enquiring.",
+          "format": "email",
+          "maxLength": 100
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number of the person enquiring.",
+          "maxLength": 20
+        },
+        "message": {
+          "type": "string",
+          "description": "The enquiry message.",
+          "maxLength": 1000
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the enquiry was sent."
+        }
+      },
+      "required": ["name", "email", "message", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/donations/{donationId}": {
+      "schema": "Donation",
+      "description": "Collection of donation intents."
+    },
+    "/enquiries/{enquiryId}": {
+      "schema": "Enquiry",
+      "description": "Collection of contact form enquiries."
+    }
+  }
+}

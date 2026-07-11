@@ -1,0 +1,106 @@
+{
+  "placeholderImages": [
+    {
+      "id": "pgas-logo",
+      "description": "PGAS Official Logo",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1CrPqY4-6cK30VHR6VgdkrPKlyBlMnIXF",
+      "imageHint": "logo"
+    },
+    {
+      "id": "edu-1",
+      "description": "Rural Education Contribution",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1hkfgfZu2lSG7zweUM_-bsn7m3R_Pa1to",
+      "imageHint": "education"
+    },
+    {
+      "id": "edu-2",
+      "description": "Rural Education Contribution",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1WVrio-XEKyeR0ImOlD0avpt1tY9yauwV",
+      "imageHint": "classroom"
+    },
+    {
+      "id": "edu-3",
+      "description": "Rural Education Contribution",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1Zx9rqc33AysSjLsqMSNVl1fDmTRPMH28",
+      "imageHint": "students"
+    },
+    {
+      "id": "edu-4",
+      "description": "Rural Education Contribution",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=18QUMiPXK0BiK8enbwmZ9VGxEHwBxhxKQ",
+      "imageHint": "learning"
+    },
+    {
+      "id": "hygiene-1",
+      "description": "Sanitary Hygiene Awareness",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1hlONHUbJ8pu4NFE5AcBgPcCMSxMEfLh_",
+      "imageHint": "hygiene"
+    },
+    {
+      "id": "hygiene-2",
+      "description": "Sanitary Hygiene Awareness",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1wDyQMK7sufwAJ6idELV_XWrCG1s1ZfBJ",
+      "imageHint": "health"
+    },
+    {
+      "id": "hygiene-3",
+      "description": "Sanitary Hygiene Awareness",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1faG4CSx_6Kj8WSA0JujZbSuZS1F2O58z",
+      "imageHint": "cleanliness"
+    },
+    {
+      "id": "hygiene-4",
+      "description": "Sanitary Hygiene Awareness",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=13dRBEJfKWK1cbM8uk8Gc16UjWyeCnZpU",
+      "imageHint": "awareness"
+    },
+    {
+      "id": "chairman",
+      "description": "Shri Bharamappa Nandaganv, Chairman",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1N_uM5PO_rdP8mJzBZRjByGspHp4fRJiF",
+      "imageHint": "chairman"
+    },
+    {
+      "id": "member-pooja",
+      "description": "Mrs. Pooja Nandaganv, Member",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1DqHPPRwqHqORRs1i75y0Fhhs3i7tSnv7",
+      "imageHint": "woman leader"
+    },
+    {
+      "id": "member-prashant",
+      "description": "Shri Prashant Ladagi, Member",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1EWKyIy-kowaxiYQPqwgkVzp9scbixnTs",
+      "imageHint": "team member"
+    },
+    {
+      "id": "member-jyotiba",
+      "description": "Shri Jyotiba Akkol, Member",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1LMhJadnAlhH4Ph5hijw9VepBCWSeS0Bp",
+      "imageHint": "team member"
+    },
+    {
+      "id": "member-shridhar",
+      "description": "Shri Shridhar Gadale, Member",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1SaFRjJnVoA6VHgnla1mqVJwPGQx2XOMq",
+      "imageHint": "team member"
+    },
+    {
+      "id": "member-vidyanand",
+      "description": "Shri Vidyanand Nadagoud, Member",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1nf7G8uGx5GY_JMtoBup5dokY9eVSlonA",
+      "imageHint": "team member"
+    },
+    {
+      "id": "member-chandrakanth",
+      "description": "Shri Chandrakanth Kagawad, Member",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=10zi4TIOiTAjQ1pIc8Nqc7fYY_0hvO4oX",
+      "imageHint": "team member"
+    },
+    {
+      "id": "qr-code",
+      "description": "Donation QR Code",
+      "imageUrl": "https://drive.google.com/uc?export=view&id=1b5QIHvv1jaoY9i3_9jjMB3N8MKh40ElL",
+      "imageHint": "qr code"
+    }
+  ]
+}
