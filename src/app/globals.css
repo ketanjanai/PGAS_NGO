@@ -10,13 +10,13 @@
     --card-foreground: 224 71.4% 4.1%;
     --popover: 0 0% 100%;
     --popover-foreground: 224 71.4% 4.1%;
-    --primary: 0 66% 47%; /* Karnataka Red #C62828 */
+    --primary: 142 76% 25%; /* NGO Deep Green */
     --primary-foreground: 0 0% 100%;
     --secondary: 43 96% 58%; /* Karnataka Yellow #FBC02D */
     --secondary-foreground: 0 0% 10%;
     --muted: 220 14.3% 95.9%;
     --muted-foreground: 220 8.9% 46.1%;
-    --accent: 142 76% 36%; /* Forest Green for Agriculture */
+    --accent: 142 76% 45%; /* Lighter Green */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 20% 98%;

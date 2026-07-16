@@ -34,6 +34,7 @@ export function Navbar() {
 
   const navLinks = [
     { href: "/", label: t.home },
+    { href: "/about", label: "About Us" },
     { href: "/gallery", label: t.gallery },
     { href: "/transparency", label: t.transparency },
     { href: "/csr", label: t.csr },

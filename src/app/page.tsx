@@ -80,12 +80,6 @@ export default function Home() {
     }
   };
 
-  // Hero Slideshow States
-  const [activeSlide, setActiveSlide] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
-  const touchStartX = useRef<number | null>(null);
-  const touchEndX = useRef<number | null>(null);
-
   // Back to Top State
   const [showBackToTop, setShowBackToTop] = useState(false);
 
@@ -120,7 +114,7 @@ export default function Home() {
     { 
       id: "member-pooja", 
       name: "Mrs. Pooja Nandaganv", 
-      role: "Member", 
+      role: "Secretary", 
       desc: "Strong advocate for women self-reliance and mother-child health programs." 
     },
     { 
@@ -158,38 +152,6 @@ export default function Home() {
   const qrCodeImage = PlaceHolderImages.find(img => img.id === "qr-code");
   const logo = PlaceHolderImages.find(img => img.id === "pgas-logo");
 
-  // Slideshow Auto-Rotate Logic (5 seconds)
-  useEffect(() => {
-    if (isPaused) return;
-    const interval = setInterval(() => {
-      setActiveSlide((prev) => (prev + 1) % eduImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isPaused, eduImages.length]);
-
-  // Touch swipe support for slideshow
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    if (!touchStartX.current || !touchEndX.current) return;
-    const diff = touchStartX.current - touchEndX.current;
-    if (diff > 50) {
-      // Swiped Left -> Next Slide
-      setActiveSlide((prev) => (prev + 1) % eduImages.length);
-    } else if (diff < -50) {
-      // Swiped Right -> Prev Slide
-      setActiveSlide((prev) => (prev - 1 + eduImages.length) % eduImages.length);
-    }
-    touchStartX.current = null;
-    touchEndX.current = null;
-  };
-
   // Listen to scrolls for Back to Top Button
   useEffect(() => {
     const handleScroll = () => {
@@ -219,52 +181,36 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-zinc-50/50 text-zinc-950 font-body antialiased selection:bg-secondary/30 scroll-smooth">
+    <div className="flex flex-col min-h-screen bg-zinc-50/50 text-zinc-950 font-serif antialiased selection:bg-secondary/30 scroll-smooth">
       <Navbar />
 
-      {/* Hero Section - Fullscreen Slideshow */}
+      {/* Hero Section - Static Impactful Hero */}
       <section 
         className="relative h-[85vh] md:h-screen w-full overflow-hidden bg-zinc-950"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
       >
-        {eduImages.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === activeSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
-          >
-            <Image
-              src={slide.imageUrl}
-              alt={slide.description}
-              fill
-              className="object-cover opacity-60 scale-105 transition-transform duration-[5000ms] ease-out"
-              priority={index === 0}
-              referrerPolicy="no-referrer"
-              onError={(e) => {
-                console.error("Hero slideshow image failed to load:", slide.imageUrl, e);
-              }}
-            />
-          </div>
-        ))}
+        <Image
+          src="/images/hero_ngo.jpg"
+          alt="Rural Students Quality Education & Hygiene"
+          fill
+          className="object-cover opacity-50 transition-transform duration-[5000ms] ease-out hover:scale-105"
+          priority
+          referrerPolicy="no-referrer"
+        />
         
         {/* Dark elegant overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/60 to-zinc-950/40 z-20" />
 
-        {/* Slideshow Content Container */}
+        {/* Hero Content Container */}
         <div className="container mx-auto px-4 md:px-8 relative z-30 h-full flex items-center">
           <div className="max-w-4xl space-y-6 md:space-y-8 animate-in fade-in duration-700">
-            {/* Slogan pill with Karnataka Red & Yellow Theme indicator */}
-            <div className="inline-flex items-center gap-3 bg-secondary/15 backdrop-blur-md px-5 py-2 rounded-full border border-secondary/30 text-secondary font-black text-[10px] md:text-xs tracking-widest uppercase shadow-md">
+            {/* Slogan pill with NGO Green Theme indicator */}
+            <div className="inline-flex items-center gap-3 bg-primary/10 backdrop-blur-md px-5 py-2 rounded-full border border-primary/30 text-primary font-black text-[10px] md:text-xs tracking-widest uppercase shadow-md">
               <span className="w-2.5 h-2.5 rounded-full bg-primary animate-pulse" />
               {t.footerTag}
             </div>
             
-            {/* Dynamic translated titles from Structured translation model */}
             <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[0.95] text-balance font-headline">
-              {mounted && t.slides && t.slides[activeSlide]?.title.split(' ').map((word: string, i: number, arr: string[]) => (
+              {t.heroHeading.split(' ').map((word: string, i: number, arr: string[]) => (
                 <span key={i} className={i >= arr.length - 2 ? "text-secondary italic" : ""}>
                   {word}{" "}
                 </span>
@@ -272,7 +218,7 @@ export default function Home() {
             </h1>
             
             <p className="text-base md:text-xl text-zinc-300 max-w-2xl leading-relaxed font-medium">
-              {mounted && t.slides && t.slides[activeSlide]?.sub}
+              {t.heroSub}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -281,54 +227,13 @@ export default function Home() {
                   ❤️ {t.donate}
                 </Button>
               </Link>
-              <Link href="/gallery">
+              <Link href="/about">
                 <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 border-white/20 text-white hover:bg-white/20 text-lg px-10 py-7 rounded-full h-auto font-black hover:border-secondary transition-all">
-                  {t.viewGallery}
+                  Learn About Our Mission
                 </Button>
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* Slideshow Controllers */}
-        <div className="absolute bottom-8 left-4 md:left-12 z-40 flex items-center gap-2 text-white/50 text-xs font-black tracking-widest uppercase">
-          <span>0{activeSlide + 1}</span>
-          <div className="w-12 h-1 bg-white/20 rounded-full overflow-hidden">
-            <div 
-              className="h-full bg-secondary transition-all duration-500" 
-              style={{ width: `${((activeSlide + 1) / eduImages.length) * 100}%` }}
-            />
-          </div>
-          <span>0{eduImages.length}</span>
-          
-          <button 
-            className="ml-4 p-2 rounded-full hover:bg-white/10 text-white hover:text-secondary transition-colors"
-            onClick={() => setIsPaused(!isPaused)}
-            aria-label={isPaused ? "Play" : "Pause"}
-          >
-            {isPaused ? <Play size={14} className="fill-current" /> : <Pause size={14} className="fill-current" />}
-          </button>
-        </div>
-
-        <div className="absolute bottom-8 right-4 md:right-12 z-40 flex gap-3">
-          <Button 
-            variant="outline" 
-            size="icon" 
-            className="rounded-full border-white/20 text-white hover:bg-white/10 hover:text-secondary bg-zinc-950/40"
-            onClick={() => setActiveSlide((prev) => (prev - 1 + eduImages.length) % eduImages.length)}
-            aria-label="Previous slide"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </Button>
-          <Button 
-            variant="outline" 
-            size="icon" 
-            className="rounded-full border-white/20 text-white hover:bg-white/10 hover:text-secondary bg-zinc-950/40"
-            onClick={() => setActiveSlide((prev) => (prev + 1) % eduImages.length)}
-            aria-label="Next slide"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </Button>
         </div>
       </section>
 
