@@ -1,4 +1,7 @@
 {
-  "name": "studio-7330132582",
-  "description": "App imported from Firebase Studio"
+  "name": "PGAS NGO Karnataka",
+  "description": "Shri Padmavati Grameen Abhivruddhi Sansthe is a premium, trust-driven NGO website empowering rural Karnataka with education, healthcare, hygiene, and women empowerment.",
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
