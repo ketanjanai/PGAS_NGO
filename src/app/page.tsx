@@ -291,7 +291,7 @@ export default function Home() {
       {/* Hero Section - Immersive 100vh Slider */}
       <section 
         id="hero-slider"
-        className="relative h-[95vh] w-full overflow-hidden bg-zinc-950"
+        className="relative h-[95vh] w-full overflow-hidden bg-zinc-900"
       >
         {/* Slides Content */}
         {slides.map((slide, index) => (
@@ -300,53 +300,50 @@ export default function Home() {
             className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"}`}
           >
             {/* Background image with Ken Burns slow zoom effect */}
-            <div className={`absolute inset-0 w-full h-full transition-transform duration-[6500ms] ease-out ${index === currentSlide ? "scale-105" : "scale-100"}`}>
+            <div className={`absolute inset-0 w-full h-full transition-transform duration-[8000ms] ease-out ${index === currentSlide ? "scale-110" : "scale-100"}`}>
               <Image
                 src={slide.image}
                 alt={slide.title}
                 fill
                 priority={index === 0}
-                className="object-cover opacity-45"
+                className="object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
 
-            {/* Premium Linear Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-zinc-950 via-zinc-950/70 to-zinc-950/30 z-10" />
+            {/* Subtle Gradient Overlay for Legibility (Optional, but kept very light) */}
+            <div className="absolute inset-0 bg-black/20 z-10" />
 
-            {/* Slide Content */}
-            <div className="container mx-auto px-6 md:px-12 relative z-20 h-full flex items-center">
-              <div className="max-w-4xl space-y-6 md:space-y-8 text-left">
-                {/* Slogan pill with active indicator */}
-                <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-md px-5 py-2 rounded-full border border-white/15 text-secondary font-bold text-xs tracking-widest uppercase shadow-lg">
-                  <span className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse" />
-                  Active Rural Initiatives • Athani
-                </div>
-                
-                {/* Dynamic Heading with accent word highlight */}
-                <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-white leading-tight tracking-tight font-sans">
+            {/* Slide Content - Centered for Impact */}
+            <div className="container mx-auto px-6 md:px-12 relative z-20 h-full flex items-center justify-center text-center">
+              <div className="max-w-5xl space-y-8">
+                {/* Dynamic Heading - Impactful & Centered */}
+                <h1 
+                  className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight tracking-tight uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                  style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
+                >
                   {slide.title.split(" ").map((word, wIdx) => (
-                    <span key={wIdx} className={wIdx === 0 ? "text-white" : "text-emerald-400 font-serif italic font-normal ml-3"}>
+                    <span key={wIdx} className="block sm:inline">
                       {word}{" "}
                     </span>
                   ))}
                 </h1>
 
-                {/* Subheading / Tagline */}
-                <p className="text-lg md:text-2xl text-zinc-200 max-w-2xl leading-relaxed font-light">
+                {/* Tagline */}
+                <p className="text-lg md:text-xl text-white font-medium drop-shadow-sm max-w-2xl mx-auto leading-relaxed">
                   {slide.tagline}
                 </p>
                 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 pt-6">
+                <div className="flex flex-col sm:flex-row gap-5 justify-center pt-8">
                   <Link href="#impact-overview">
-                    <Button size="lg" className="w-full sm:w-auto bg-emerald-600 text-white hover:bg-emerald-500 text-base px-8 py-6 rounded-full shadow-2xl h-auto font-bold transition-all border border-emerald-500">
-                      Our Impact <ArrowRight className="w-5 h-5 ml-2" />
+                    <Button size="lg" className="bg-emerald-600 text-white hover:bg-emerald-500 text-lg px-10 py-7 rounded-full shadow-2xl h-auto font-black transition-all border-none">
+                      OUR IMPACT
                     </Button>
                   </Link>
                   <Link href="#donate-section">
-                    <Button size="lg" variant="outline" className="w-full sm:w-auto bg-white/10 border-white/20 text-white hover:bg-white/20 text-base px-8 py-6 rounded-full h-auto font-bold transition-all">
-                      Support Our Mission
+                    <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-md border-white/40 text-white hover:bg-white hover:text-zinc-900 text-lg px-10 py-7 rounded-full h-auto font-black transition-all">
+                      SUPPORT US
                     </Button>
                   </Link>
                 </div>
