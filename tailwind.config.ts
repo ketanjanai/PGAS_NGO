@@ -11,9 +11,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        serif: ['Merriweather', 'serif'],
-        headline: ['Merriweather', 'serif'],
+        body: ['var(--font-inter)', 'sans-serif'],
+        serif: ['var(--font-merriweather)', 'serif'],
+        headline: ['var(--font-merriweather)', 'serif'],
         code: ['monospace'],
       },
       colors: {

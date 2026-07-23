@@ -13,14 +13,12 @@ export default function TransparencyPage() {
   const [notification, setNotification] = useState<{ title: string; message: string } | null>(null);
 
   const documents = [
-    { title: "Trust Registration Certificate", type: "REGISTRATION", year: "2017", id: "Athani/2017" },
-    { title: "NGO Darpan NITI Aayog", type: "COMPLIANCE", year: "Verified", id: "KA/2018/0202992" },
-    { title: "80G Tax Exemption Certificate", type: "TAX EXEMPT", year: "Lifetime", id: "Approved" },
-    { title: "12A Registration Certificate", type: "TAX EXEMPT", year: "Permanent", id: "Verified" },
-    { title: "CSR Form-1 Registration", type: "CSR", year: "Active", id: "CSR000123xx" },
-    { title: "Annual Audit Report 2023-24", type: "FINANCE", year: "2024", id: "Published" },
-    { title: "Board Members Disclosure", type: "GOVERNANCE", year: "2024", id: "Active" },
-    { title: "Pan Card of the Trust", type: "LEGAL", year: "Permanent", id: "AAATG00xxM" },
+    { title: "Registration Certificate", type: "REGISTRATION", year: "2017", id: "Athani/2017" },
+    { title: "12A Certificate", type: "TAX EXEMPT", year: "Permanent", id: "Verified" },
+    { title: "80G Certificate", type: "TAX EXEMPT", year: "Lifetime", id: "Approved" },
+    { title: "NGO Registration", type: "NGO DARPAN", year: "Verified", id: "KA/2018/0202992" },
+    { title: "Annual Reports", type: "FINANCE", year: "2023-24", id: "Published" },
+    { title: "Transparency Documents", type: "COMPLIANCE", year: "2024", id: "Active" },
   ];
 
   // Localized headers
@@ -85,20 +83,9 @@ export default function TransparencyPage() {
                        <p className="text-xs font-bold text-zinc-400">ID: {doc.id}</p>
                     </div>
                     <div className="flex gap-4 pt-4 border-t border-zinc-100">
-                      <Button 
-                        onClick={() => handleAction(doc.title, 'download')}
-                        variant="outline" 
-                        className="flex-1 rounded-xl h-11 text-xs font-bold bg-white border-zinc-200 hover:bg-zinc-50"
-                      >
-                        <Download className="w-4 h-4 mr-2" /> Download
-                      </Button>
-                      <Button 
-                        onClick={() => handleAction(doc.title, 'view')}
-                        variant="ghost" 
-                        className="flex-1 rounded-xl h-11 text-xs font-bold hover:bg-zinc-50"
-                      >
-                        <ExternalLink className="w-4 h-4 mr-2" /> View
-                      </Button>
+                      <div className="flex-1 flex items-center gap-2 text-primary font-bold text-xs">
+                        <ShieldCheck className="w-4 h-4" /> Verified Document
+                      </div>
                     </div>
                   </CardContent>
                 </Card>

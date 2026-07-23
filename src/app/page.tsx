@@ -54,52 +54,59 @@ export default function Home() {
   const slides = [
     {
       id: 1,
-      title: "Rural Education",
+      title: "Transforming Rural Lives",
       tagline: "Empowering Every Child to Learn, Dream and Succeed.",
-      image: "/images/hero_rural_education.jpg",
-      keyword: "Learn, Dream and Succeed"
+      image: "https://drive.google.com/uc?export=view&id=1hkfgfZu2lSG7zweUM_-bsn7m3R_Pa1to",
+      mobileImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1080&h=1920&auto=format&fit=crop",
+      keyword: "Education"
     },
     {
       id: 2,
-      title: "Quality Education",
+      title: "Transforming Rural Lives",
       tagline: "Every Student Deserves the Opportunity to Learn.",
-      image: "/images/hero_quality_education.jpg",
-      keyword: "Opportunity to Learn"
+      image: "https://drive.google.com/uc?export=view&id=1WVrio-XEKyeR0ImOlD0avpt1tY9yauwV",
+      mobileImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1080&h=1920&auto=format&fit=crop",
+      keyword: "Students"
     },
     {
       id: 3,
-      title: "Women Empowerment",
+      title: "Transforming Rural Lives",
       tagline: "Empowered Women Build Stronger Families and Communities.",
-      image: "/images/hero_women_empowerment.jpg",
-      keyword: "Stronger Families"
+      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1920&h=1080&auto=format&fit=crop",
+      mobileImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1080&h=1920&auto=format&fit=crop",
+      keyword: "Women"
     },
     {
       id: 4,
-      title: "Accessible Healthcare",
+      title: "Transforming Rural Lives",
       tagline: "Healthy Communities Are the Foundation of Progress.",
-      image: "/images/hero_healthcare.jpg",
-      keyword: "Foundation of Progress"
+      image: "https://images.unsplash.com/photo-1584515933487-782719c3bb24?q=80&w=1920&h=1080&auto=format&fit=crop",
+      mobileImage: "https://images.unsplash.com/photo-1584515933487-782719c3bb24?q=80&w=1080&h=1920&auto=format&fit=crop",
+      keyword: "Health"
     },
     {
       id: 5,
-      title: "Sustainable Livelihood",
+      title: "Transforming Rural Lives",
       tagline: "Creating Opportunities for Self-Reliant Rural Communities.",
-      image: "/images/hero_livelihood.jpg",
-      keyword: "Self-Reliant"
+      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1920&h=1080&auto=format&fit=crop",
+      mobileImage: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1080&h=1920&auto=format&fit=crop",
+      keyword: "Livelihood"
     },
     {
       id: 6,
-      title: "Rural Development",
+      title: "Transforming Rural Lives",
       tagline: "Building Better Villages Through Collective Action.",
-      image: "/images/hero_development.jpg",
-      keyword: "Collective Action"
+      image: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=1920&h=1080&auto=format&fit=crop",
+      mobileImage: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=1080&h=1920&auto=format&fit=crop",
+      keyword: "Villages"
     },
     {
       id: 7,
-      title: "Environmental Sustainability",
+      title: "Transforming Rural Lives",
       tagline: "Protecting Nature for Future Generations.",
-      image: "/images/hero_environment.jpg",
-      keyword: "Future Generations"
+      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1920&h=1080&auto=format&fit=crop",
+      mobileImage: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1080&h=1920&auto=format&fit=crop",
+      keyword: "Nature"
     }
   ];
 
@@ -256,31 +263,52 @@ export default function Home() {
 
   const successStories = [
     {
-      id: "geeta",
-      name: "Geeta's Dream",
-      village: "Arbhal Village",
-      title: "From Drop-Out to Computer Literacy Lead",
-      story: "Due to family financial constraints, Geeta had to leave school early. When PGAS set up a computer literacy module in her area, she joined our free weekend batches. Today, she works as a digital assistant at the local gram panchayat and guides other young girls.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
-      metric: "Now Financially Self-Reliant"
+      id: "ambedkar-hall",
+      name: "Community Hall Renovation",
+      village: "Janawad Village",
+      title: "Renovation of Dr. B. R. Ambedkar Community Hall",
+      date: "5 June 2024",
+      location: "Janawad Village, Athani Taluk, Belagavi District, Karnataka",
+      story: "As part of our commitment to rural development, Shri Padmavati Grameena Abhivrudhi Samsthe successfully completed the painting and renovation of the Dr. B. R. Ambedkar Community Hall. The initiative was led by Mr. Abhishek Kulkarni, Mr. Vinod Kamble, and dedicated volunteers to improve an important public space used by the local community.",
+      image: "https://images.unsplash.com/photo-1541976535111-440f1131ef92?q=80&w=600&auto=format&fit=crop",
+      metric: "Public Space Improved",
+      reel: "https://www.instagram.com/reel/C73w5VGyCag/"
     },
     {
-      id: "dipti",
-      name: "Dipti's Safety",
-      village: "Shedbal Rural School",
-      title: "Restoring Dignity, Attendance, and Hope",
-      story: "High school student Dipti often missed several days of school every month due to the lack of private, functional sanitation units. PGAS constructed clean, dedicated female toilet units at her school. Regular school attendance has jumped back to 98% among high school girls.",
+      id: "tree-plantation",
+      name: "Green is Life",
+      village: "Janawad Village",
+      title: "Tree Plantation Drive",
+      date: "8 June 2024",
+      location: "Janawad Village, Athani Taluk, Belagavi District, Karnataka",
+      story: "Under the theme \"Green is Life,\" the organization launched a tree plantation campaign in the village cemetery. The initiative began with planting a neem tree and continues with the mission of planting and maintaining 100 neem saplings to support environmental conservation.",
+      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600&auto=format&fit=crop",
+      metric: "100+ Saplings Planted",
+      reel: "https://www.instagram.com/reel/C782IfgyKC8/"
+    },
+    {
+      id: "world-food-day",
+      name: "World Food Day",
+      village: "Janawad Village",
+      title: "Food Distribution Program",
+      date: "7 June 2024",
+      location: "Janawad Village, Athani Taluk, Belagavi District, Karnataka",
+      story: "With the message \"Only the Hungry Understand the Value of Food,\" the organization conducted a food distribution program supporting families in need. The initiative also promoted responsible food consumption through the message: Take only what you need. Finish what you take.",
       image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop",
-      metric: "+98% Regular Attendance"
+      metric: "Families Supported",
+      reel: "https://www.instagram.com/reel/C76fxWXykxx/"
     },
     {
-      id: "sarita",
-      name: "Sarita's Pride",
-      village: "Kottalgi Village",
-      title: "Self-Help Groups Unlocking Financial Freedom",
-      story: "Sarita joined the PGAS Self-Help Group (SHG) training program, where she learned financial planning, savings models, and small-scale poultry farming. She secured a small micro-grant to start her own farm and now supports her children's private high school fees comfortably.",
-      image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop",
-      metric: "Earns ₹8,000/month consistently"
+      id: "toilet-beautification",
+      name: "Hygiene & Dignity",
+      village: "Janawad Village",
+      title: "Women's Public Toilet Beautification",
+      date: "17 May 2024",
+      location: "Janawad Village, Athani Taluk, Belagavi District, Karnataka",
+      story: "The organization completed the painting and beautification of the public women's toilet in Janawad Village. This initiative improved cleanliness, hygiene, and dignity for women while creating a safer and healthier public facility.",
+      image: "https://images.unsplash.com/photo-1584515933487-782719c3bb24?q=80&w=600&auto=format&fit=crop",
+      metric: "Dignity Restored",
+      reel: "https://www.instagram.com/reel/C7ZCZ8oyb3f/"
     }
   ];
 
@@ -301,14 +329,20 @@ export default function Home() {
           >
             {/* Background image with Ken Burns slow zoom effect */}
             <div className={`absolute inset-0 w-full h-full transition-transform duration-[8000ms] ease-out ${index === currentSlide ? "scale-110" : "scale-100"}`}>
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                priority={index === 0}
-                className="object-cover"
-                referrerPolicy="no-referrer"
-              />
+              <picture>
+                <source
+                  media="(max-width: 640px)"
+                  srcSet={slide.mobileImage}
+                />
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  fill
+                  priority={index === 0}
+                  className="object-cover"
+                  referrerPolicy="no-referrer"
+                />
+              </picture>
             </div>
 
             {/* Subtle Gradient Overlay for Legibility (Optional, but kept very light) */}
@@ -319,7 +353,7 @@ export default function Home() {
               <div className="max-w-5xl space-y-8">
                 {/* Dynamic Heading - Impactful & Centered */}
                 <h1 
-                  className="text-3xl sm:text-4xl md:text-5xl font-black text-white leading-tight tracking-tight uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                  className="text-xl sm:text-2xl md:text-3xl font-black text-white leading-tight tracking-tight uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
                 >
                   {slide.title.split(" ").map((word, wIdx) => (
@@ -330,7 +364,7 @@ export default function Home() {
                 </h1>
 
                 {/* Tagline */}
-                <p className="text-lg md:text-xl text-white font-medium drop-shadow-sm max-w-2xl mx-auto leading-relaxed">
+                <p className="text-sm md:text-base text-white font-medium drop-shadow-sm max-w-2xl mx-auto leading-relaxed">
                   {slide.tagline}
                 </p>
                 
@@ -408,14 +442,14 @@ export default function Home() {
               Measurable Progress
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-tight">
-              Transforming Rural Lives in <span className="text-emerald-600 font-serif italic">Belagavi</span>
+              Transforming Rural Lives
             </h2>
             <p className="text-zinc-500 font-medium text-lg leading-relaxed">
-              We focus on building long-term local capacity, sustainable systems, and empowering communities directly with transparent stewardship.
+              We focus on building long-term local capacity by strengthening communities through sustainable systems, education, environmental initiatives, and transparent stewardship. Our goal is to empower villages to become self-reliant while creating lasting social impact for future generations.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             
             {/* Stat 1 */}
             <div className="bg-zinc-50 p-6 rounded-[2rem] border border-zinc-100 shadow-sm text-center flex flex-col justify-between">
@@ -423,22 +457,22 @@ export default function Home() {
                 <MapPin className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-950">25+</h3>
+                <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-950">4+</h3>
                 <p className="text-xs uppercase font-black tracking-widest text-zinc-400 mt-2">Villages Served</p>
               </div>
-              <p className="text-zinc-500 text-xs mt-3 leading-relaxed">Active hubs in Athani Taluk</p>
+              <p className="text-zinc-500 text-xs mt-3 leading-relaxed">Sustainable rural development</p>
             </div>
 
             {/* Stat 2 */}
             <div className="bg-zinc-50 p-6 rounded-[2rem] border border-zinc-100 shadow-sm text-center flex flex-col justify-between">
               <div className="p-3 bg-emerald-100/60 text-emerald-700 rounded-2xl w-fit mx-auto mb-4">
-                <BookOpen className="w-6 h-6" />
+                <Users className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-950">15,000+</h3>
+                <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-950">280+</h3>
                 <p className="text-xs uppercase font-black tracking-widest text-zinc-400 mt-2">Students Assisted</p>
               </div>
-              <p className="text-zinc-500 text-xs mt-3 leading-relaxed">Textbooks & stationery kits</p>
+              <p className="text-zinc-500 text-xs mt-3 leading-relaxed">Education initiatives</p>
             </div>
 
             {/* Stat 3 */}
@@ -447,34 +481,22 @@ export default function Home() {
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-950">40+</h3>
-                <p className="text-xs uppercase font-black tracking-widest text-zinc-400 mt-2">Schools Equipped</p>
+                <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-950">6</h3>
+                <p className="text-xs uppercase font-black tracking-widest text-zinc-400 mt-2">Schools Partnered</p>
               </div>
-              <p className="text-zinc-500 text-xs mt-3 leading-relaxed">Dedicated girl's sanitation</p>
+              <p className="text-zinc-500 text-xs mt-3 leading-relaxed">Learning & infrastructure</p>
             </div>
 
             {/* Stat 4 */}
             <div className="bg-zinc-50 p-6 rounded-[2rem] border border-zinc-100 shadow-sm text-center flex flex-col justify-between">
               <div className="p-3 bg-emerald-100/60 text-emerald-700 rounded-2xl w-fit mx-auto mb-4">
-                <Users className="w-6 h-6" />
-              </div>
-              <div>
-                <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-950">5,000+</h3>
-                <p className="text-xs uppercase font-black tracking-widest text-zinc-400 mt-2">Women Trained</p>
-              </div>
-              <p className="text-zinc-500 text-xs mt-3 leading-relaxed">Financial freedom training</p>
-            </div>
-
-            {/* Stat 5 */}
-            <div className="bg-zinc-50 p-6 rounded-[2rem] border border-zinc-100 shadow-sm text-center flex flex-col justify-between col-span-2 md:col-span-1">
-              <div className="p-3 bg-emerald-100/60 text-emerald-700 rounded-2xl w-fit mx-auto mb-4">
                 <Sprout className="w-6 h-6" />
               </div>
               <div>
-                <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-950">2,000+</h3>
+                <h3 className="text-3xl md:text-4xl font-extrabold text-zinc-950">200+</h3>
                 <p className="text-xs uppercase font-black tracking-widest text-zinc-400 mt-2">Trees Planted</p>
               </div>
-              <p className="text-zinc-500 text-xs mt-3 leading-relaxed">Afforestation drives executed</p>
+              <p className="text-zinc-500 text-xs mt-3 leading-relaxed">Environmental sustainability</p>
             </div>
 
           </div>
@@ -491,7 +513,7 @@ export default function Home() {
             <div className="space-y-6 relative">
               <div className="absolute top-0 left-0 text-zinc-200 text-[10rem] font-serif leading-none select-none -translate-y-12 -translate-x-4">“</div>
               <h3 className="text-3xl md:text-5xl font-black text-zinc-900 tracking-tight leading-tight relative z-10 font-sans">
-                Empowering Through <span className="text-emerald-600 italic font-serif font-normal">Dignity</span>, Not Charity.
+                Empowering Through Dignity, Not Charity.
               </h3>
               <p className="text-zinc-600 leading-relaxed font-medium relative z-10">
                 At Shri Padmavati Grameen Abhivruddhi Sansthe, we believe true transformation comes from unlocking opportunities. Our projects are designed by local leaders who understand the unique socio-economic landscape of North Karnataka, fostering long-term resilience rather than short-term dependence.
@@ -552,7 +574,7 @@ export default function Home() {
               Areas of Intervention
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-tight">
-              Structured Interventions for <span className="text-emerald-600 font-serif italic">Global Goals</span>
+              Structured Interventions for Global Goals
             </h2>
             <p className="text-zinc-500 font-medium text-lg leading-relaxed">
               Our rural initiatives are designed in strict alignment with the United Nations Sustainable Development Goals (SDGs).
@@ -702,7 +724,7 @@ export default function Home() {
                 Visual Impact Logs
               </span>
               <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-tight">
-                Our Work Captured <span className="text-emerald-600 font-serif italic">in Action</span>
+                Our Work Captured in Action
               </h2>
               <p className="text-zinc-500 font-medium">
                 Browse our real implementation photographs in Athani, Belagavi district. Click on any image to open the high-resolution lightbox.
@@ -783,7 +805,7 @@ export default function Home() {
               Grassroots Testimonials
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-tight">
-              Stories of <span className="text-emerald-600 font-serif italic">Change</span>
+              Our Community Impact Stories
             </h2>
             <p className="text-zinc-500 font-medium text-lg leading-relaxed">
               Real human impact and transformative pathways unlocked by our donors and field coordinators.
@@ -812,7 +834,15 @@ export default function Home() {
                       <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">{item.village}</span>
                     </div>
                     <h5 className="text-emerald-700 font-extrabold text-sm uppercase tracking-wider">{item.title}</h5>
+                    <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest">{item.date} • {item.location}</p>
                     <p className="text-zinc-500 text-sm leading-relaxed font-medium">"{item.story}"</p>
+                    {item.reel && (
+                      <Link href={item.reel} target="_blank">
+                        <Button variant="outline" className="w-full mt-4 border-zinc-200 text-xs font-black uppercase tracking-widest rounded-xl hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-200 transition-all">
+                          <Play className="w-3 h-3 mr-2 fill-current" /> Watch Impact Reel
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                   <div className="pt-6 border-t border-zinc-200/60 mt-6 text-xs text-zinc-400 font-bold flex items-center gap-1.5">
                     <Check className="w-4 h-4 text-emerald-600" /> Ground verified by PGAS coordinator
@@ -825,6 +855,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section 6.5: Join Our Mission */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6 md:px-12 text-center max-w-4xl space-y-10">
+          <div className="space-y-4">
+            <h2 className="text-3xl md:text-5xl font-black text-zinc-900 tracking-tight leading-tight">
+              Join Our Mission
+            </h2>
+            <p className="text-zinc-500 font-medium text-lg leading-relaxed">
+              Meaningful change begins with small acts of service. From improving public infrastructure and protecting the environment to feeding families and supporting village development, every initiative is driven by community participation and volunteer spirit.
+            </p>
+            <p className="text-emerald-700 font-black text-xl md:text-2xl pt-4">
+              Helping Hands. Stronger Communities. Brighter Futures.
+            </p>
+            <p className="text-zinc-400 font-medium text-sm pt-2">
+              We welcome volunteers, donors, organizations, and partners to join us in creating lasting social impact.
+            </p>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center">
+            <Link href="#contact-section">
+              <Button size="lg" className="bg-emerald-600 text-white hover:bg-emerald-500 px-10 py-7 rounded-full text-lg font-black shadow-xl">
+                VOLUNTEER WITH US
+              </Button>
+            </Link>
+            <Link href="#donate-section">
+              <Button size="lg" variant="outline" className="border-zinc-300 text-zinc-900 hover:bg-zinc-50 px-10 py-7 rounded-full text-lg font-black">
+                DONATE TO THE MISSION
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Section 7: Our Dedicated Team (Meet the Leaders - Driven by Local Leadership) */}
       <section className="py-24 bg-zinc-50 border-t border-zinc-150">
         <div className="container mx-auto px-6 md:px-12">
@@ -834,7 +896,7 @@ export default function Home() {
               Grounded Governance
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-tight">
-              Driven by <span className="text-emerald-600 font-serif italic">Local Leadership</span>
+              Driven by Local Leadership
             </h2>
             <p className="text-zinc-500 font-medium text-lg leading-relaxed">
               Meet the visionary social workers and community development experts guiding Shri Padmavati Grameen Abhivruddhi Sansthe.
@@ -917,7 +979,7 @@ export default function Home() {
               Clear Clarifications
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-tight">
-              Frequently Asked <span className="text-emerald-600 font-serif italic">Questions</span>
+              Frequently Asked Questions
             </h2>
             <p className="text-zinc-500 font-medium leading-relaxed">
               Find instant answers regarding our regulatory registrations, tax exemption benefits, and operational models.
@@ -967,7 +1029,7 @@ export default function Home() {
               Ethical Governance
             </span>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Transparency & <span className="text-emerald-400 font-serif italic">Stewardship</span>
+              Transparency & Stewardship
             </h2>
             <p className="text-zinc-400 font-light text-lg">
               We are committed to full compliance, audits, and open data. Access our certificates and reports at any time.
@@ -1031,21 +1093,28 @@ export default function Home() {
                   Independent third-party audits uploaded annually. Download official financial ledger details directly.
                 </p>
               </div>
-              <div className="pt-4 border-t border-white/5 space-y-2">
-                <a 
+              <div className="pt-4 border-t border-white/5 space-y-3">
+                <Link 
                   href="/transparency"
                   className="flex items-center justify-between text-xs font-bold text-zinc-300 hover:text-white group p-1 transition-colors"
                 >
-                  <span>Download Annual Report FY23-24</span>
-                  <Download className="w-4 h-4 text-emerald-400 group-hover:translate-y-0.5 transition-transform" />
-                </a>
-                <a 
+                  <span>Registration Certificate</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link 
                   href="/transparency"
                   className="flex items-center justify-between text-xs font-bold text-zinc-300 hover:text-white group p-1 transition-colors"
                 >
-                  <span>Download Annual Report FY22-23</span>
-                  <Download className="w-4 h-4 text-emerald-400 group-hover:translate-y-0.5 transition-transform" />
-                </a>
+                  <span>12A & 80G Certificates</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link 
+                  href="/transparency"
+                  className="flex items-center justify-between text-xs font-bold text-zinc-300 hover:text-white group p-1 transition-colors"
+                >
+                  <span>Annual Reports & Audits</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
 
@@ -1082,7 +1151,7 @@ export default function Home() {
                 Support Rural Growth
               </span>
               <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-tight">
-                Make a Direct <span className="text-emerald-600 font-serif italic">Impact Today</span>
+                Make a Direct Impact Today
               </h2>
               <p className="text-zinc-500 font-medium leading-relaxed">
                 Your contributions directly translate into study books, girl's sanitation cubicles, healthcare checkups, and village afforestation modules in Athani.
@@ -1318,7 +1387,7 @@ export default function Home() {
                   Direct Communications
                 </span>
                 <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-zinc-900 leading-tight font-sans">
-                  Get in <span className="text-emerald-600 font-serif italic">Touch</span>
+                  Get in Touch
                 </h2>
                 <p className="text-zinc-500 font-medium">
                   Have questions, feedback, or would like to volunteer? Reach out directly via our official communication lines.
@@ -1421,6 +1490,31 @@ export default function Home() {
               </form>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Section 13: Call to Action (CTA Banner) */}
+      <section className="py-24 bg-emerald-600 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none" />
+        <div className="container mx-auto px-6 md:px-12 text-center relative z-10 space-y-8">
+          <h2 className="text-3xl md:text-5xl font-black text-white tracking-tight leading-tight">
+            Ready to Build a Better Future Together?
+          </h2>
+          <p className="text-emerald-50 text-lg md:text-xl max-w-2xl mx-auto font-medium">
+            Your contribution—whether time or treasure—directly fuels grassroots rural implementation in Athani Taluk.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+            <Link href="#donate-section">
+              <Button size="lg" className="bg-white text-emerald-700 hover:bg-emerald-50 px-10 py-8 rounded-full text-lg font-black shadow-2xl h-auto transition-transform hover:scale-105">
+                DONATE SECURELY
+              </Button>
+            </Link>
+            <Link href="/stories">
+              <Button size="lg" variant="outline" className="border-emerald-400 text-white hover:bg-emerald-700 px-10 py-8 rounded-full text-lg font-black h-auto">
+                OUR IMPACT REPORTS
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
