@@ -50,63 +50,39 @@ export default function Home() {
     setMounted(true);
   }, []);
 
-  // Hero Slider Configuration (7 Slides)
+  // Hero Slider Configuration (4 Slides)
   const slides = [
     {
       id: 1,
       title: "Transforming Rural Lives",
       tagline: "Empowering Every Child to Learn, Dream and Succeed.",
-      image: "https://drive.google.com/uc?export=view&id=1hkfgfZu2lSG7zweUM_-bsn7m3R_Pa1to",
-      mobileImage: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1080&h=1920&auto=format&fit=crop",
+      image: "https://drive.google.com/uc?export=view&id=1rAvwQ8es37UMhsU3CNhScZ6DCsEio4sw",
+      mobileImage: "https://drive.google.com/uc?export=view&id=1rAvwQ8es37UMhsU3CNhScZ6DCsEio4sw",
       keyword: "Education"
     },
     {
       id: 2,
       title: "Transforming Rural Lives",
       tagline: "Every Student Deserves the Opportunity to Learn.",
-      image: "https://drive.google.com/uc?export=view&id=1WVrio-XEKyeR0ImOlD0avpt1tY9yauwV",
-      mobileImage: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1080&h=1920&auto=format&fit=crop",
+      image: "https://drive.google.com/uc?export=view&id=1M5t9vnbJlIMZErSgmmJNRcQd-Ax7raLK",
+      mobileImage: "https://drive.google.com/uc?export=view&id=1M5t9vnbJlIMZErSgmmJNRcQd-Ax7raLK",
       keyword: "Students"
     },
     {
       id: 3,
       title: "Transforming Rural Lives",
       tagline: "Empowered Women Build Stronger Families and Communities.",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1920&h=1080&auto=format&fit=crop",
-      mobileImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1080&h=1920&auto=format&fit=crop",
+      image: "https://drive.google.com/uc?export=view&id=1kFiO36-IRdnCychBFiGrvEIM4bBGnU15",
+      mobileImage: "https://drive.google.com/uc?export=view&id=1kFiO36-IRdnCychBFiGrvEIM4bBGnU15",
       keyword: "Women"
     },
     {
       id: 4,
       title: "Transforming Rural Lives",
       tagline: "Healthy Communities Are the Foundation of Progress.",
-      image: "https://images.unsplash.com/photo-1584515933487-782719c3bb24?q=80&w=1920&h=1080&auto=format&fit=crop",
-      mobileImage: "https://images.unsplash.com/photo-1584515933487-782719c3bb24?q=80&w=1080&h=1920&auto=format&fit=crop",
+      image: "https://drive.google.com/uc?export=view&id=1EseWLLoXtjdowU92VGubbC9ilmctRx2T",
+      mobileImage: "https://drive.google.com/uc?export=view&id=1EseWLLoXtjdowU92VGubbC9ilmctRx2T",
       keyword: "Health"
-    },
-    {
-      id: 5,
-      title: "Transforming Rural Lives",
-      tagline: "Creating Opportunities for Self-Reliant Rural Communities.",
-      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1920&h=1080&auto=format&fit=crop",
-      mobileImage: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1080&h=1920&auto=format&fit=crop",
-      keyword: "Livelihood"
-    },
-    {
-      id: 6,
-      title: "Transforming Rural Lives",
-      tagline: "Building Better Villages Through Collective Action.",
-      image: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=1920&h=1080&auto=format&fit=crop",
-      mobileImage: "https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=1080&h=1920&auto=format&fit=crop",
-      keyword: "Villages"
-    },
-    {
-      id: 7,
-      title: "Transforming Rural Lives",
-      tagline: "Protecting Nature for Future Generations.",
-      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1920&h=1080&auto=format&fit=crop",
-      mobileImage: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1080&h=1920&auto=format&fit=crop",
-      keyword: "Nature"
     }
   ];
 
@@ -270,7 +246,6 @@ export default function Home() {
       date: "5 June 2024",
       location: "Janawad Village, Athani Taluk, Belagavi District, Karnataka",
       story: "As part of our commitment to rural development, Shri Padmavati Grameena Abhivrudhi Samsthe successfully completed the painting and renovation of the Dr. B. R. Ambedkar Community Hall. The initiative was led by Mr. Abhishek Kulkarni, Mr. Vinod Kamble, and dedicated volunteers to improve an important public space used by the local community.",
-      image: "https://images.unsplash.com/photo-1541976535111-440f1131ef92?q=80&w=600&auto=format&fit=crop",
       metric: "Public Space Improved",
       reel: "https://www.instagram.com/reel/C73w5VGyCag/"
     },
@@ -282,7 +257,6 @@ export default function Home() {
       date: "8 June 2024",
       location: "Janawad Village, Athani Taluk, Belagavi District, Karnataka",
       story: "Under the theme \"Green is Life,\" the organization launched a tree plantation campaign in the village cemetery. The initiative began with planting a neem tree and continues with the mission of planting and maintaining 100 neem saplings to support environmental conservation.",
-      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=600&auto=format&fit=crop",
       metric: "100+ Saplings Planted",
       reel: "https://www.instagram.com/reel/C782IfgyKC8/"
     },
@@ -294,7 +268,6 @@ export default function Home() {
       date: "7 June 2024",
       location: "Janawad Village, Athani Taluk, Belagavi District, Karnataka",
       story: "With the message \"Only the Hungry Understand the Value of Food,\" the organization conducted a food distribution program supporting families in need. The initiative also promoted responsible food consumption through the message: Take only what you need. Finish what you take.",
-      image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=600&auto=format&fit=crop",
       metric: "Families Supported",
       reel: "https://www.instagram.com/reel/C76fxWXykxx/"
     },
@@ -306,7 +279,6 @@ export default function Home() {
       date: "17 May 2024",
       location: "Janawad Village, Athani Taluk, Belagavi District, Karnataka",
       story: "The organization completed the painting and beautification of the public women's toilet in Janawad Village. This initiative improved cleanliness, hygiene, and dignity for women while creating a safer and healthier public facility.",
-      image: "https://images.unsplash.com/photo-1584515933487-782719c3bb24?q=80&w=600&auto=format&fit=crop",
       metric: "Dignity Restored",
       reel: "https://www.instagram.com/reel/C7ZCZ8oyb3f/"
     }
@@ -345,15 +317,15 @@ export default function Home() {
               </picture>
             </div>
 
-            {/* Subtle Gradient Overlay for Legibility (Optional, but kept very light) */}
-            <div className="absolute inset-0 bg-black/20 z-10" />
+            {/* Subtle Overlay */}
+            <div className="absolute inset-0 bg-black/40 z-10" />
 
             {/* Slide Content - Centered for Impact */}
             <div className="container mx-auto px-6 md:px-12 relative z-20 h-full flex items-center justify-center text-center">
               <div className="max-w-5xl space-y-8">
                 {/* Dynamic Heading - Impactful & Centered */}
                 <h1 
-                  className="text-xl sm:text-2xl md:text-3xl font-black text-white leading-tight tracking-tight uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
+                  className="text-2xl sm:text-3xl md:text-5xl font-black text-white leading-tight tracking-tight uppercase drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]"
                   style={{ textShadow: "0 2px 8px rgba(0,0,0,0.6)" }}
                 >
                   {slide.title.split(" ").map((word, wIdx) => (
@@ -364,7 +336,7 @@ export default function Home() {
                 </h1>
 
                 {/* Tagline */}
-                <p className="text-sm md:text-base text-white font-medium drop-shadow-sm max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base md:text-xl text-white font-medium drop-shadow-sm max-w-2xl mx-auto leading-relaxed">
                   {slide.tagline}
                 </p>
                 
@@ -812,27 +784,19 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
             {successStories.map((item) => (
               <Card key={item.id} className="bg-zinc-50 rounded-[2.5rem] border border-zinc-100 overflow-hidden shadow-sm flex flex-col h-full hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                <div className="relative h-60 w-full overflow-hidden bg-zinc-100 border-b border-zinc-150">
-                  <Image 
-                    src={item.image}
-                    alt={item.name}
-                    fill
-                    className="object-cover"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute bottom-4 left-4 bg-emerald-600 text-white font-bold text-xs px-4 py-1.5 rounded-full shadow-md">
+                <div className="relative pt-6 px-6 bg-zinc-100 border-b border-zinc-150 flex items-center justify-between pb-4">
+                  <div className="bg-emerald-600 text-white font-bold text-xs px-4 py-1.5 rounded-full shadow-md">
                     {item.metric}
                   </div>
+                  <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">{item.village}</span>
                 </div>
                 <CardContent className="p-8 flex-1 flex flex-col justify-between">
                   <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <h4 className="font-bold text-xl text-zinc-950 font-sans">{item.name}</h4>
-                      <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">{item.village}</span>
-                    </div>
+                    <h4 className="font-bold text-xl text-zinc-950 font-sans">{item.name}</h4>
                     <h5 className="text-emerald-700 font-extrabold text-sm uppercase tracking-wider">{item.title}</h5>
                     <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-widest">{item.date} • {item.location}</p>
                     <p className="text-zinc-500 text-sm leading-relaxed font-medium">"{item.story}"</p>
