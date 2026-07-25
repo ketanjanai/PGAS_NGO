@@ -15,23 +15,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState<Language>('en');
 
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem('pgas-language') as Language;
-      if (saved && (saved === 'en' || saved === 'kn' || saved === 'hi')) {
-        setLangState(saved);
-      }
-    } catch (e) {
-      console.error("Failed to load language preference:", e);
-    }
+    // Force English always
+    setLangState('en');
   }, []);
 
   const setLang = (newLang: Language) => {
-    setLangState(newLang);
-    try {
-      localStorage.setItem('pgas-language', newLang);
-    } catch (e) {
-      console.error("Failed to save language preference:", e);
-    }
+    // Do nothing, only English allowed
   };
 
   const t = translations[lang] || translations['en'];

@@ -301,20 +301,14 @@ export default function Home() {
           >
             {/* Background image with Ken Burns slow zoom effect */}
             <div className={`absolute inset-0 w-full h-full transition-transform duration-[8000ms] ease-out ${index === currentSlide ? "scale-110" : "scale-100"}`}>
-              <picture>
-                <source
-                  media="(max-width: 640px)"
-                  srcSet={slide.mobileImage}
-                />
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  fill
-                  priority={index === 0}
-                  className="object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </picture>
+              <Image
+                src={slide.image}
+                alt={slide.title}
+                fill
+                priority={index === 0}
+                className="object-cover"
+                referrerPolicy="no-referrer"
+              />
             </div>
 
             {/* Subtle Overlay */}

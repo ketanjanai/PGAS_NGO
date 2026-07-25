@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Heart, Globe } from "lucide-react";
+import { Menu, X, Heart } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations, type Language } from "@/lib/translations";
@@ -18,7 +18,7 @@ import {
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { lang, setLang, t } = useLanguage();
+  const { t } = useLanguage();
 
   // Load the logo URL directly from our known placeholder images
   const logo = PlaceHolderImages.find(img => img.id === "pgas-logo");
@@ -83,27 +83,6 @@ export function Navbar() {
           <div className="h-6 w-px bg-zinc-200" />
           
           <div className="flex items-center gap-4">
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="gap-2 font-bold uppercase tracking-widest text-[10px] border-zinc-200 hover:bg-zinc-50">
-                  <Globe className="w-3.5 h-3.5 text-primary" /> {translations[lang].label}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="bg-white border border-zinc-100 shadow-xl rounded-xl">
-                {Object.entries(translations).map(([code, data]) => (
-                  <DropdownMenuItem 
-                    key={code} 
-                    onClick={() => {
-                      setLang(code as Language);
-                    }} 
-                    className={`font-bold cursor-pointer text-xs px-4 py-2 hover:bg-zinc-50 ${lang === code ? "text-primary" : "text-zinc-700"}`}
-                  >
-                    {data.label}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-
             <Link href="/#donate-section">
               <Button size="lg" className="bg-primary text-white hover:bg-primary/90 rounded-full px-6 font-black shadow-lg shadow-primary/20 h-10 md:h-12 text-sm">
                 <Heart className="w-4 h-4 mr-2 fill-current text-secondary" />
@@ -115,26 +94,6 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <div className="flex lg:hidden items-center gap-2">
-          {/* Mobile Language Button quick-switch */}
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="sm" className="p-2 h-9 w-9 bg-zinc-50 rounded-xl">
-                <Globe className="w-4 h-4 text-primary" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="bg-white border border-zinc-100 shadow-xl rounded-xl">
-              {Object.entries(translations).map(([code, data]) => (
-                <DropdownMenuItem 
-                  key={code} 
-                  onClick={() => setLang(code as Language)} 
-                  className={`font-bold cursor-pointer text-xs ${lang === code ? "text-primary" : "text-zinc-700"}`}
-                >
-                  {data.label}
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
-
           <button 
             className="p-2 text-primary bg-primary/5 rounded-xl hover:bg-primary/10 transition-colors" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -149,21 +108,6 @@ export function Navbar() {
       {isMenuOpen && (
         <div className="lg:hidden bg-white border-b border-zinc-200 animate-in slide-in-from-top-4 duration-300 shadow-2xl overflow-y-auto max-h-[90vh]">
           <div className="flex flex-col p-6 gap-6">
-            <div className="flex flex-wrap gap-2 pb-2 border-b border-zinc-100">
-              <span className="text-[10px] uppercase font-black tracking-wider text-muted-foreground w-full mb-1">{t.selectLanguage}:</span>
-              {Object.entries(translations).map(([code, data]) => (
-                <button 
-                  key={code} 
-                  onClick={() => {
-                    setLang(code as Language);
-                  }}
-                  className={`text-xs font-black px-4 py-2 rounded-full border transition-all ${lang === code ? 'bg-primary text-white border-primary shadow-sm' : 'bg-zinc-50 border-zinc-200 text-zinc-700 hover:bg-zinc-100'}`}
-                >
-                  {data.label}
-                </button>
-              ))}
-            </div>
-
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
                 <Link
