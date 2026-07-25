@@ -1469,7 +1469,7 @@ export default function Home() {
               </Button>
             </Link>
             <Link href="/stories">
-              <Button size="lg" variant="outline" className="border-emerald-400 text-white hover:bg-emerald-700 px-10 py-8 rounded-full text-lg font-black h-auto">
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white/10 px-10 py-8 rounded-full text-lg font-black h-auto transition-colors">
                 OUR IMPACT REPORTS
               </Button>
             </Link>
