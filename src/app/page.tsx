@@ -137,23 +137,28 @@ export default function Home() {
   // Handle Donation Intent
   const [donationStatus, setDonationStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const handleDonationIntent = async () => {
-    if (donorDetails.name && donorDetails.phone) {
-      setDonationStatus('loading');
-      try {
-        await addDoc(collection(db, "donations"), {
-          ...donorDetails,
-          timestamp: new Date().toISOString(),
-          type: donationTab,
-        });
-        setDonationStatus('success');
-        setShowQR(true);
-      } catch (error) {
-        console.error("Error saving donation intent:", error);
-        setDonationStatus('error');
-        alert("Something went wrong. Please try again.");
-      }
-    } else {
+    // Basic validation
+    if (!donorDetails.name || !donorDetails.phone) {
       alert("Please enter both your name and phone number to continue.");
+      return;
+    }
+
+    setDonationStatus('loading');
+    
+    // Show QR immediately to avoid blocking user
+    setShowQR(true);
+    setDonationStatus('success');
+
+    try {
+      // Save to Firestore in the background
+      await addDoc(collection(db, "donations"), {
+        ...donorDetails,
+        timestamp: new Date().toISOString(),
+        type: donationTab,
+      });
+    } catch (error) {
+      console.error("Error saving donation intent in background:", error);
+      // We don't block the UI here since QR is already shown
     }
   };
 
@@ -1213,28 +1218,37 @@ export default function Home() {
                       </Button>
                     </div>
                   ) : (
-                    <div className="text-center space-y-6 p-4 bg-white border border-zinc-150 rounded-3xl">
-                      <h4 className="font-bold text-zinc-900 text-lg">Scan & Donate Instantly</h4>
-                      <p className="text-zinc-400 text-xs">Scan the official merchant QR below using any UPI app (GPay, PhonePe, Paytm, BHIM).</p>
-                      <div className="relative w-48 h-48 mx-auto border-4 border-zinc-50 rounded-2xl overflow-hidden shadow-md">
+                    <div className="text-center space-y-4 p-6 bg-white border border-zinc-150 rounded-3xl shadow-sm">
+                      <div className="space-y-2">
+                        <h4 className="font-bold text-zinc-900 text-xl tracking-tight">Scan & Donate Instantly</h4>
+                        <p className="text-zinc-500 text-xs px-4">Use any UPI app (GPay, PhonePe, Paytm, BHIM) to scan the official QR code below.</p>
+                      </div>
+                      
+                      <div className="relative aspect-[3/4] max-w-[280px] mx-auto border-4 border-zinc-50 rounded-2xl overflow-hidden shadow-lg bg-white">
                         <Image
-                          src={qrCodeImage ? qrCodeImage.imageUrl : "https://drive.google.com/uc?export=view&id=1b5QIHvv1jaoY9i3_9jjMB3N8MKh40ElL"}
-                          alt="Donation QR Code"
+                          src="https://drive.google.com/uc?export=view&id=1b5QIHvv1jaoY9i3_9jjMB3N8MKh40ElL"
+                          alt="Official Donation QR Flyer"
                           fill
                           className="object-contain"
+                          priority
                           referrerPolicy="no-referrer"
                         />
                       </div>
-                      <div className="text-xs space-y-1 font-bold text-zinc-500">
-                        <p className="text-zinc-800">Merchant Name: SHRI PADMAVATI GRAMEEN ABHIVRUDDHI</p>
-                        <p className="font-mono">UPI VPA: upi@bhumidonations (Direct Bank Settlement)</p>
+
+                      <div className="bg-zinc-50 p-4 rounded-2xl space-y-2 border border-zinc-100">
+                        <div className="text-xs font-bold text-zinc-500 uppercase tracking-widest">Merchant Details</div>
+                        <div className="space-y-1">
+                          <p className="text-zinc-900 font-bold text-sm">SHRI PADMAVATI GRAMEEN ABHIVRUDDHI</p>
+                          <p className="font-mono text-emerald-600 font-black text-xs">UPI ID: 255054560152588@cnrb</p>
+                        </div>
                       </div>
+
                       <Button
                         onClick={() => setShowQR(false)}
-                        variant="outline"
-                        className="text-xs font-bold text-zinc-500"
+                        variant="ghost"
+                        className="text-xs font-bold text-zinc-400 hover:text-emerald-600 transition-colors"
                       >
-                        Go Back / Edit Details
+                        ← Back to Details / Edit
                       </Button>
                     </div>
                   )}
